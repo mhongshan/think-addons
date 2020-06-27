@@ -100,7 +100,7 @@ class Configure
             return;
         }
         $defaultRoutes = empty($this->config['routes'][$type][$name]) ? [] : (array)$this->config['routes'][$type][$name];
-        $routes = array_unique(array_merge($defaultRoutes, $routes));
+        $routes = array_merge($defaultRoutes, $routes);
         $this->config['routes'][$type][$name] = $routes;
     }
 }
