@@ -20,6 +20,7 @@ class AddonsService extends Service
         $this->app->bind('addons', Addons::class);
         /** @var Addons $addons */
         $addons = $this->app->addons;
+        $addons->getPath()->check(); // 检查目录
         $addons->getLoader()->loadAddons(); // 加载插件
         $addons->listenEvent();
         $addons->bind();
