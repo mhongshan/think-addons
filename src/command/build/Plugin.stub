@@ -1,0 +1,54 @@
+<?php
+declare(strict_types=1);
+
+namespace addons\{type}\{name_str};
+
+use mhs\think\base\BaseAddons;
+
+class Plugin extends BaseAddons
+{
+    /**
+     * 安装
+     * @return bool
+     */
+    public function install()
+    {
+        return true;
+    }
+
+    /**
+     * 卸载
+     * @return bool
+     */
+    public function uninstall()
+    {
+        return true;
+    }
+
+    /**
+     * 启用
+     * @return bool
+     */
+    public function enable()
+    {
+        return true;
+    }
+
+    /**
+     * 禁用
+     * @return bool
+     */
+    public function disable()
+    {
+        return true;
+    }
+
+    /**
+     * 更新
+     * @return bool
+     */
+    public function upgrade()
+    {
+        return true;
+    }
+}
