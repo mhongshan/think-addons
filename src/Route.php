@@ -45,7 +45,7 @@ class Route
 
         // 生成控制器对象
         $instance = invoke($class, ['app' => $app]);
-        $vars = [];
+        $vars = $request->param();
         if (is_callable([$instance, $action])) {
             // 执行操作方法
             $call = [$instance, $action];
